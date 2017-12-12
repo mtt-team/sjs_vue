@@ -31,10 +31,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 webpack-dev-server 2.7.1 以上无法在IE10正常工作(http://blog.csdn.net/ForeverCjl/article/details/78355842)
 
-开发构建
+## 开发构建
 
-目录结构
+## 目录结构
 
+```bash
 ├── /dist/           # 项目输出目录
 ├── /build/          # 项目构建(webpack)相关代码
 ├── /config/         # 项目开发环境配置
@@ -67,7 +68,9 @@ webpack-dev-server 2.7.1 以上无法在IE10正常工作(http://blog.csdn.net/Fo
 ├── index.html       # 入口页面 
 ├── package.json     # npm配置
 ├── README.md        # 项目说明
+```
+
 文件夹命名说明:
 
-components：组件（方法）为单位以文件夹保存，文件夹名组件首字母大写，方法首字母小写,文件夹内主文件与文件夹同名，多文件以index.js导出对象。
-views：页面为单位以文件夹保存，文件夹名首字母小写（特殊除外）,文件夹内主文件以index.js导出，多文件时可建立components文件夹，如果有子路由，依次按照路由层次建立文件夹。
+-   components：组件（方法）为单位以文件夹保存，文件夹名组件首字母大写，方法首字母小写,文件夹内主文件与文件夹同名，多文件以index.js导出对象。
+-   views：页面为单位以文件夹保存，文件夹名首字母小写（特殊除外）,文件夹内主文件以index.js导出，多文件时可建立components文件夹，如果有子路由，依次按照路由层次建立文件夹。
