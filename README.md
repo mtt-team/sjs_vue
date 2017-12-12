@@ -39,21 +39,20 @@ webpack-dev-server 2.7.1 以上无法在IE10正常工作(http://blog.csdn.net/Fo
 ├── /dist/           # 项目输出目录
 ├── /build/          # 项目构建(webpack)相关代码
 ├── /config/         # 项目开发环境配置
+├── /mock/           # 数据mock
 ├── /src/            # 项目源码目录
+│ ├── /api/          # 数据接口
 │ ├── /assets/       # 静态图片和样式放置
 │ │ ├── skin.less    # 全局样式
 │ │ └── vars.less    # 全局样式变量
 │ ├── /components/   # UI组件及UI相关方法
-│ ├── /mock/         # 数据mock
 │ ├── /router/       # 路由配置文件夹
 │ │ ├── index.js     # 路由配置
 │ ├── /store/        # 数据模型
-│ ├── /services/     # 数据接口
 │ ├── /themes/       # 项目样式
 │ ├── /utils/        # 工具函数
 │ │ ├── config.js    # 项目常规配置
 │ │ ├── menu.js      # 菜单及面包屑配置
-│ │ ├── config.js    # 项目常规配置
 │ │ ├── request.js   # 异步请求函数
 │ │ └── theme.js     # 项目需要在js中使用到样式变量
 │ ├── /views/        # 路由组件
