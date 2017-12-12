@@ -30,7 +30,7 @@
                     </el-menu-item>
                     <el-menu-item index="3">
                         <i class="el-icon-setting"></i>
-                        <span slot="title">导航三</span>
+                        <span slot="title"><a href="./#/vuexdemo">vuex</a></span>
                     </el-menu-item>
                 </el-menu>
                 <div style="width: 80%;height: 300px;position:absolute; right: 100px; top: 50px;">
@@ -126,7 +126,7 @@
     export default {
         data() {
             return {
-                isCollapse: true,
+                isCollapse: false,
                 activeIndex2: '1'
             };
         },
