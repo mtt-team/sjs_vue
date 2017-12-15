@@ -5,99 +5,44 @@
                     <el-radio-button :label="false">展开</el-radio-button>
                     <el-radio-button :label="true">收起</el-radio-button>
                 </el-radio-group>
-                <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
-                    <el-submenu index="1">
-                        <template slot="title">
+                <el-menu default-active="1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
+                    <router-link to="/vue-index">
+                        <el-menu-item index="1">
                             <i class="el-icon-location"></i>
                             <span slot="title">网站模板</span>
-                        </template>
-                        <el-menu-item-group>
-                            <span slot="title">分组一</span>
-                            <el-menu-item index="1-1">选项1</el-menu-item>
-                            <el-menu-item index="1-2">选项2</el-menu-item>
-                        </el-menu-item-group>
-                        <el-menu-item-group title="分组2">
-                            <el-menu-item index="1-3">选项3</el-menu-item>
-                        </el-menu-item-group>
-                        <el-submenu index="1-4">
-                            <span slot="title">选项4</span>
-                            <el-menu-item index="1-4-1">选项1</el-menu-item>
-                        </el-submenu>
-                    </el-submenu>
+                        </el-menu-item>
+                    </router-link>
                     <el-menu-item index="2">
                         <i class="el-icon-menu"></i>
                         <span slot="title">登录页面</span>
                     </el-menu-item>
-                    <el-menu-item index="3">
-                        <i class="el-icon-setting"></i>
-                        <span slot="title"><a href="./#/vuexdemo">vuex</a></span>
-                    </el-menu-item>
+                    <router-link to="/vuex-demo">
+                        <el-menu-item index="3">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">vuex用法</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/upload-plug">
+                        <el-menu-item index="4">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">ie9  上传</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/download-code">
+                        <el-menu-item index="5">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">下载代码</span>
+                        </el-menu-item>
+                    </router-link>
+                    <router-link to="/vue-grid-layout">
+                        <el-menu-item index="6">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">拖拽插件</span>
+                        </el-menu-item>
+                    </router-link>
                 </el-menu>
                 <div style="width: 80%;height: 300px;position:absolute; right: 100px; top: 50px;">
-                        <div class="module-border">
-                                <el-menu
-                                :default-active="activeIndex2"
-                                class="el-menu-demo"
-                                mode="horizontal"
-                                @select="handleSelect"
-                                background-color="#545c64"
-                                text-color="#fff"
-                                active-text-color="#ffd04b">
-                                <el-menu-item index="1">处理中心</el-menu-item>
-                                <el-submenu index="2">
-                                <template slot="title">我的工作台</template>
-                                <el-menu-item index="2-1">选项1</el-menu-item>
-                                <el-menu-item index="2-2">选项2</el-menu-item>
-                                <el-menu-item index="2-3">选项3</el-menu-item>
-                                </el-submenu>
-                                <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-                            </el-menu>
-                            <div>
-                                菜单demo1
-                            </div>
-                        </div>
-                        <div class="module-border">
-                                <div style="position: relative;">
-                                        <el-menu
-                                        default-active="2"
-                                        class="el-menu-vertical-demo"
-                                        @open="handleOpen"
-                                        @close="handleClose"
-                                        background-color="#545c64"
-                                        text-color="#fff"
-                                        active-text-color="#ffd04b">
-                                        <el-submenu index="1">
-                                          <template slot="title">
-                                            <i class="el-icon-location"></i>
-                                            <span>导航一</span>
-                                          </template>
-                                          <el-menu-item-group>
-                                            <template slot="title">分组一</template>
-                                            <el-menu-item index="1-1">选项1</el-menu-item>
-                                            <el-menu-item index="1-2">选项2</el-menu-item>
-                                          </el-menu-item-group>
-                                          <el-menu-item-group title="分组2">
-                                            <el-menu-item index="1-3">选项3</el-menu-item>
-                                          </el-menu-item-group>
-                                          <el-submenu index="1-4">
-                                            <template slot="title">选项4</template>
-                                            <el-menu-item index="1-4-1">选项1</el-menu-item>
-                                          </el-submenu>
-                                        </el-submenu>
-                                        <el-menu-item index="2">
-                                          <i class="el-icon-menu"></i>
-                                          <span slot="title">导航二</span>
-                                        </el-menu-item>
-                                        <el-menu-item index="3">
-                                          <i class="el-icon-setting"></i>
-                                          <span slot="title">导航三</span>
-                                        </el-menu-item>
-                                      </el-menu>
-                                    <div class="content-demo2">
-                                        菜单demo2
-                                    </div>
-                                </div>
-                        </div>
+                <router-view></router-view>
                 </div>
         </div>
         
