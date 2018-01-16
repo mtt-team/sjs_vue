@@ -3,6 +3,7 @@
 import 'babel-polyfill'
 import 'es6-promise'
 import Vue from 'vue'
+import axios from 'axios'
 import iView from 'iview'
 import Vuelidate from 'vuelidate'
 import 'iview/dist/styles/iview.css'
@@ -15,10 +16,11 @@ import App from './App.vue'
 import store from './store'
 import { currency } from './currency'
 
+Vue.prototype.$http = axios
 Vue.filter('currency', currency)
 
 Vue.use(ElementUI)
-Vue.use(iView);
+Vue.use(iView)
 Vue.use(Vuelidate)
 
 Vue.component('icon', Icon)

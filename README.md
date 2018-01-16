@@ -27,6 +27,15 @@ npm run e2e
 npm test
 ```
 
+使用mock：
+
+```bash
+打开新的命令面板输入
+npm run mock
+打开 http://localhost:8080/vue-index 查看控制面板   代码示例在src/views/vue/index.vue demo
+配置在build/config/index.js  第13行 
+```
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 webpack-dev-server 2.7.1 以上无法在IE10正常工作(http://blog.csdn.net/ForeverCjl/article/details/78355842)

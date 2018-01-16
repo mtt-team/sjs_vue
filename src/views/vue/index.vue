@@ -95,6 +95,11 @@
             handleSelect(key, keyPath) {
                 console.log(key, keyPath);
             }
+        },
+        mounted() {
+            this.$http.get("/api/comment/get.action").then(response => {
+                console.log(response.data.result)
+            })
         }
     }
 
